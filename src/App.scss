@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+$white: #fff;
+$primary: #e3e4ea;
+$second: #9d9ea5;
+$black-dark: #0a0a15;
+$orange: #eea549;
+$title: #552f2c;
+
+body {
+  font-family: "Poppins";
+  background-color: $white;
+}
+
+header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  .hello {
+    color: $second;
+  }
+  .name {
+    color: $title;
+  }
+}
+
+.search-container {
+  background-color: $primary;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .input {
+    padding: 0.4rem;
+    position: relative;
+    left: -0.6rem;
+    border: none;
+    background-color: $primary;
+    outline: none;
+    font-size: 0.9rem;
+    color: $title;
+  }
+
+  .icon-search {
+    position: relative;
+    left: 0.5rem;
+    align-self: center;
+    font-size: 1.1rem;
+  }
+
+  .icon-settings {
+    background-color: #fff;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    position: relative;
+    right: 0.1rem;
+    align-self: center;
+    font-size: 1.5rem;
+  }
+}
+
+.recommended {
+  .title {
+    text-decoration: underline;
+    color: $title;
+    text-decoration-color: lighten($orange, 20%);
+  }
+
+  .card-section {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    .card {
+      background-color: $orange;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      width: 10rem;
+      height: 16rem;
+      border-radius: 1.3rem;
+      padding: 0 1rem;
+      cursor: pointer;
+      color: $white;
+      transition: box-shadow 0.3s ease-in-out;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .card-title {
+        display: table-caption;
+      }
+
+      .text-bottom {
+        position: relative;
+        bottom: -8rem;
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+          font-size: 1.1rem;
+        }
+        .favorite {
+          position: relative;
+          top: 2px;
+          margin-right: 5px;
+        }
+
+        .plus {
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 11px $second;
+      }
+    }
+  }
+}
+
+.other {
+  .title {
+    text-decoration: underline;
+    color: $title;
+    text-decoration-color: lighten($orange, 20%);
+  }
+
+  .other-card-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .other-card {
+      display: flex;
+      width: 25rem;
+      justify-content: space-between;
+      // border: 1px solid red;
+      margin-bottom: 2rem;
+    }
+
+    .image {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1.2rem;
+    }
+
+    .middle-text {
+      margin: auto auto;
+      .number {
+        color: $second;
+      }
+
+      .name {
+        color: $title;
+        font-weight: bold;
+      }
+    }
+
+    .price {
+      margin: auto auto;
+      color: $second;
+      font-size: 1.1rem;
+      position: relative;
+      top: 10px;
+    }
+  }
+}
